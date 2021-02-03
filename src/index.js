@@ -260,7 +260,7 @@ const createPontuationInputs = (numberOfInputs, index) => {
     inputPontuation.setAttribute("type", "text");
     inputPontuation.setAttribute("value", "0");
     inputPontuation.setAttribute("inputmode", "numeric");
-    inputPontuation.setAttribute("pattern", "[0-9]*");
+    //inputPontuation.setAttribute("pattern", "[0-9]*"); - habilita teclado numérico no iOS, mas não tem sinal de negativo o teclado
     pontuationScreen.appendChild(inputPontuation);
     totalPlayers = index;
   }
