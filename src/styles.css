@@ -5,14 +5,13 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  margin: 0;
+  height: 100vh;
   background: #2989d8;
   background: -moz-radial-gradient(center, ellipse cover,  #2989d8 0%, #1e5799 100%);
   background: -webkit-radial-gradient(center, ellipse cover,  #2989d8 0%,#1e5799 100%);
   background: radial-gradient(ellipse at center,  #2989d8 0%,#1e5799 100%);
   filter: progid:DXImageTransform.;Microsoft.gradient( startColorstr='#2989d8', endColorstr='#1e5799',GradientType=1 );
-  height: 100vh;
-  padding: 2rem 1rem;
 }
 
 .hide {
@@ -27,8 +26,14 @@ body {
   align-items: center;
 }
 
+#telaInical {
+  padding: 4rem;
+  box-sizing: border-box;
+}
+
 #telaPontuacao {
-  padding-bottom: 10rem;
+  padding: 0 0 10rem;
+  box-sizing: border-box;
 }
 
 p {
