@@ -73,7 +73,12 @@ input:disabled {
 button {
   background: #ffe100;
   color: #2989d8;
-  font-size: 3rem;
+  font-size: 2.5rem;
+}
+
+button:active {
+  background: #2989d8;
+  color: #ffe100;
 }
 
 #calculateWinner {
@@ -88,7 +93,7 @@ button {
 }
 
 #newGame {
-  position: absolute;
+  position: fixed;
   width: 50px;
   height: 50px;
   border-radius: 100px;
