@@ -1,5 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+html {
+  font-size: 10px;
+}
+
 body {
   font-family: sans-serif;
+  background: #2989d8;
+  background: -moz-radial-gradient(center, ellipse cover,  #2989d8 0%, #1e5799 100%);
+  background: -webkit-radial-gradient(center, ellipse cover,  #2989d8 0%,#1e5799 100%);
+  background: radial-gradient(ellipse at center,  #2989d8 0%,#1e5799 100%);
+  filter: progid:DXImageTransform.;Microsoft.gradient( startColorstr='#2989d8', endColorstr='#1e5799',GradientType=1 );
+  height: 100vh;
+  padding: 2rem 1rem;
 }
 
 .hide {
@@ -7,11 +20,24 @@ body {
 }
 
 .container {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#telaPontuacao {
+  margin-bottom: 4rem;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  margin: 2rem 0;
 }
 
 input[type="text"] {
@@ -19,11 +45,62 @@ input[type="text"] {
 }
 
 input,
-select {
+select,
+button {
   width: 100%;
   border-radius: 100px;
-  border: 2px $light-gray solid;
+  border: 2px #f8f8f8 solid;
   box-sizing: border-box;
-  padding: 20px 30px;
-  background: transparent;
+  padding: 10px 30px;
+  background: rgba(255,255,255,.2);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  outline: none;
+}
+
+input:disabled {
+  background: #fff;
+  color: #666;
+}
+
+.individualPotuation {
+  display: none;
+}
+
+button {
+  background: #ffe100;
+  color: #2989d8;
+  font-size: 2.5rem;
+}
+
+#calculateWinner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  border-bottom: 0;
+  margin: 0 0 0 20%;
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+}
+
+#newGame {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  padding: 0;
+  text-align: center;
+  font-size: 4rem;
+  line-height: 4rem;
+  top: 2rem;
+  right: 2rem;
+  border-radius: 100px;
+  text-decoration: none;
+  background: #ffe100;
+  color: #2989d8;
+  display: none;
 }

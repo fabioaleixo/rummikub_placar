@@ -8,6 +8,11 @@ let totalPlayers = 0;
 const allPlayers = [];
 const calculateWinner = document.getElementById("calculateWinner");
 const allInputs = document.getElementsByTagName("input");
+const newGame = document.getElementById("newGame");
+
+newGame.addEventListener("click", () => {
+  window.location.reload();
+});
 
 const reducer = (total, num) => {
   return total + num;
@@ -220,20 +225,24 @@ calculateWinner.addEventListener("click", () => {
         ))
       : (match4[3].value = match4[3].value);
   }
-  let insertedPoints = document.getElementsByClassName("id" + totalPlayers);
-  let showResult = document.getElementById("total" + totalPlayers);
-  let totalOfPoints = [];
-  for (let i = 0; i < insertedPoints.length; i++) {
-    totalOfPoints[i] = parseInt(insertedPoints[i].value);
-    let result = totalOfPoints.reduce(reducer);
-    showResult.value = result;
+  for (let i = 0; i <= totalPlayers; i++) {
+    let insertedPoints = document.getElementsByClassName("id" + i);
+    let showResult = document.getElementById("total" + i);
+    let totalOfPoints = [];
+    for (let i = 0; i < insertedPoints.length; i++) {
+      totalOfPoints[i] = parseInt(insertedPoints[i].value);
+      let result = totalOfPoints.reduce(reducer);
+      showResult.value = result;
+    }
   }
 });
 
 const inputFocus = () => {
   for (let i = 0; i < allInputs.length; i++) {
     allInputs[i].addEventListener("focus", (e) => {
-      e.target.value == 0 ? (e.target.value = "") : (e.target.value = 0);
+      e.target.value == 0
+        ? (e.target.value = "")
+        : (e.target.value = e.target.value);
     });
     allInputs[i].addEventListener("focusout", (e) => {
       e.target.value == ""
@@ -247,10 +256,7 @@ const createPontuationInputs = (numberOfInputs, index) => {
   for (let i = 0; i < numberOfInputs; i++) {
     let id = i + 1;
     let inputPontuation = document.createElement("input");
-    inputPontuation.setAttribute(
-      "class",
-      "individualPontuation id" + index + " match" + id
-    );
+    inputPontuation.setAttribute("class", "id" + index + " match" + id);
     inputPontuation.setAttribute("type", "text");
     inputPontuation.setAttribute("value", "0");
     pontuationScreen.appendChild(inputPontuation);
@@ -260,6 +266,7 @@ const createPontuationInputs = (numberOfInputs, index) => {
   inputTotal.setAttribute("id", "total" + index);
   inputTotal.setAttribute("type", "text");
   inputTotal.setAttribute("placeholder", "Valor total");
+  inputTotal.disabled = true;
   pontuationScreen.appendChild(inputTotal);
   inputFocus();
 };
@@ -285,6 +292,7 @@ const pushNames = () => {
 start.addEventListener("click", () => {
   initScreen.style.display = "none";
   pontuationScreen.style.display = "block";
+  newGame.style.display = "block";
   pushNames();
 });
 
