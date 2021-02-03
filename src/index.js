@@ -259,7 +259,7 @@ const createPontuationInputs = (numberOfInputs, index) => {
     inputPontuation.setAttribute("class", "id" + index + " match" + id);
     inputPontuation.setAttribute("type", "text");
     inputPontuation.setAttribute("value", "0");
-    inputPontuation.setAttribute("inputmode", "numeric");
+    //inputPontuation.setAttribute("inputmode", "numeric"); esse controlava o teclado numérico no Android, mas infleunciava alguns iOS tbm, então foi preciso desabilitar
     //inputPontuation.setAttribute("pattern", "[0-9]*"); - habilita teclado numérico no iOS, mas não tem sinal de negativo o teclado
     pontuationScreen.appendChild(inputPontuation);
     totalPlayers = index;
