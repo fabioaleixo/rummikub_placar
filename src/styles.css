@@ -67,6 +67,10 @@ button {
   outline: none;
 }
 
+select {
+  -webkit-appearance:none;
+}
+
 input:disabled {
   background: #fff;
   color: #666;
