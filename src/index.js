@@ -259,6 +259,7 @@ const createPontuationInputs = (numberOfInputs, index) => {
     inputPontuation.setAttribute("class", "id" + index + " match" + id);
     inputPontuation.setAttribute("type", "text");
     inputPontuation.setAttribute("value", "0");
+    inputPontuation.setAttribute("pattern", "d*");
     pontuationScreen.appendChild(inputPontuation);
     totalPlayers = index;
   }
