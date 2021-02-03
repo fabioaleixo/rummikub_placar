@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="telaInical">
+        <select id="numPlayers">
+          <option>Selecione o número de jogadores</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+        <div class="hide" id="namesContainer">
+          <p>Escreva o nome dos jogadores abaixo:</p>
+          <div id="names"></div>
+          <button id="inicairPartida">Iniciar Partida</button>
+        </div>
+      </div>
+      <div id="telaPontuacao" class="hide">
+        <button id="calculateWinner">Calcular</button>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
