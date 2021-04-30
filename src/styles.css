@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap");
 
 html {
   font-size: 10px;
@@ -8,10 +8,19 @@ body {
   margin: 0;
   height: 100vh;
   background: #2989d8;
-  background: -moz-radial-gradient(center, ellipse cover,  #2989d8 0%, #1e5799 100%);
-  background: -webkit-radial-gradient(center, ellipse cover,  #2989d8 0%,#1e5799 100%);
-  background: radial-gradient(ellipse at center,  #2989d8 0%,#1e5799 100%);
-  filter: progid:DXImageTransform.;Microsoft.gradient( startColorstr='#2989d8', endColorstr='#1e5799',GradientType=1 );
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    #2989d8 0%,
+    #1e5799 100%
+  );
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    #2989d8 0%,
+    #1e5799 100%
+  );
+  background: radial-gradient(ellipse at center, #2989d8 0%, #1e5799 100%);
 }
 
 .hide {
@@ -34,16 +43,17 @@ body {
 #telaPontuacao {
   padding: 0 0 10rem;
   box-sizing: border-box;
+  column-count: 2;
 }
 
 p {
-  font-family: 'Love Ya Like A Sister', sans-serif;
+  font-family: "Love Ya Like A Sister", sans-serif;
   font-weight: 600;
   font-size: 3rem;
-  letter-spacing: .4rem;
+  letter-spacing: 0.4rem;
   color: #fff;
   text-align: center;
-  margin: 4rem 0 2rem;
+  margin: 0;
 }
 
 input[type="text"] {
@@ -58,17 +68,17 @@ button {
   border: 2px #f8f8f8 solid;
   box-sizing: border-box;
   padding: 10px 30px;
-  background: rgba(255,255,255,.2);
-  font-family: 'Love Ya Like A Sister', sans-serif;
+  background: rgba(255, 255, 255, 0.2);
+  font-family: "Love Ya Like A Sister", sans-serif;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #fff;
   margin-bottom: 2rem;
   outline: none;
 }
 
 select {
-  -webkit-appearance:none;
+  -webkit-appearance: none;
 }
 
 input:disabled {
